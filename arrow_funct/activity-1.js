@@ -4,11 +4,18 @@
  * Problem 1: Basic Arrow Function Conversion
  * Convert the following traditional function to an arrow function:
  */
-
+let name = "Alejandro";
 function greet(name) {
     return "Hello, " + name + "!";
 }
 
+const greet1 = (name) => "hello, " + name + "!";
+
+const greet2 = (name) => 
+"hello, " + name + "!"
+;
+
+const greet3 = name => "hello, " + name + "!";
 // Your task:
 // 1. Convert the above function to an arrow function (one-liner with implicit return)
 // 2. Write it as a multi-line arrow function with explicit return
@@ -20,7 +27,12 @@ function greet(name) {
 // Create an arrow function called 'calculateArea' that takes two parameters 
 // (length and width) and returns the area of a rectangle.
 // ============================================================================
+length = 5; width = 10;
+const calculateaarea = (length, width) => length * width;
 
+function calculateaarea1(length, width) {
+    return length * width;
+}
 // Your task:
 // 1. Write calculateArea as a one-liner with implicit return
 // 2. Write calculateArea with explicit return statement
@@ -33,8 +45,13 @@ function greet(name) {
 // ============================================================================
 
 const numbers = [1, 2, 3, 4, 5];
+const calculate1 = numbers
+.filter(Number => Number < 4)
+.map(Number => Number * Number)
+.reduce(Number => Number + Number)
+; console.log(calculate1);
 
-// Your task:
+// Your task:;
 // 1. Square each number (map)
 // 2. Filter out numbers greater than 3
 // 3. Find the sum of all numbers (reduce)
@@ -58,6 +75,7 @@ const person = {
 // Your task:
 // 1. Run person.traditional() and person.arrow() - what happens?
 // 2. Explain why they behave differently
+//
 // 3. How would you fix the arrow function to correctly access person.name?
 // 4. Provide at least two different solutions
 
