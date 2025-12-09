@@ -48,8 +48,7 @@ const numbers = [1, 2, 3, 4, 5];
 const calculate1 = numbers
 .filter(Number => Number < 4)
 .map(Number => Number * Number)
-.reduce(Number => Number + Number)
-; console.log(calculate1);
+.reduce(Number => Number + Number);
 
 // Your task:;
 // 1. Square each number (map)

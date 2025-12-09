@@ -4,14 +4,14 @@
  * Problem 1: Function Declaration Analysis
  * Compare and contrast these two implementations:
  */
-
+// console.log(double())    a regular function can be called before it's declaration
 // Version 1
 function double(x) {
     return x * 2;
 }
-
+// console.log(double1)     an arrow function has to be declared before it is called
 // Version 2
-const double = (x) => x * 2;
+const double1 = (x) => x * 2;
 
 // Your task:
 // 1. Can you call 'double' before it's declared in each version? Test your hypothesis.
@@ -25,7 +25,12 @@ const double = (x) => x * 2;
 // ============================================================================
 
 const scores = [95, 82, 73, 88, 67, 91, 55, 78];
+const calculate = scores
+.filter(score => score > 75)
+.sort((a, b) => b - a)
 
+;
+console.log(calculate);
 // Your task:
 // 1. Filter students who scored above 75
 // 2. Map their scores to letter grades (A: 90+, B: 80-89, C: 70-79, D: 60-69, F: <60)
